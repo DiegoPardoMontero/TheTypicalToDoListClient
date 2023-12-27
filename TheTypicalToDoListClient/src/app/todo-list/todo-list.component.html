@@ -5,9 +5,9 @@
         </h1>     
     </div>
     <div class="contenedorAgregarTareas">
-        <form class="creacionTareas">
-            <label for="name">Nueva Tarea:</label>
-            <input type="text" id="campoNuevaTarea" name="name">
+        <form class="creacionTareas" (ngSubmit)="addTask()">
+            <label for="campoNuevaTarea">Nueva Tarea:</label>
+            <input type="text" id="campoNuevaTarea" name="campoNuevaTarea" [(ngModel)]="titleNewTask" required>
             <input type="submit" value="+">
         </form>  
     </div>

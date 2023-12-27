@@ -20,4 +20,8 @@ export class TaskService {
   retrieveTasks() : Observable<Task[]>{
     return this.http.get<Task[]>(`http://localhost:8080/tasks/list`);
   }
+
+  postTask(task : Task | undefined) : Observable<Task> {
+    return this.http.post<Task>("http://localhost:8080/tasks/create", task, this.httpOptions);
+  }
 }
