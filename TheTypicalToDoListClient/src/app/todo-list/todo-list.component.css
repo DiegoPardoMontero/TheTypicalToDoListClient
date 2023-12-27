@@ -1,12 +1,54 @@
-.todoListaPardo {
-    border: 8px dashed #7e3a84;
+.contenedor {
     margin-top: 50px;
     margin-right: 30%;
     margin-left: 30%;
 }
 
-.tituloGeneral{
+.todoListaPardo {
+    border: 8px dashed #7e3a84;
+}
+
+.tituloGeneral {
     color: #2d1414;
-    font-family: 'Poppins', sans-serif;
     text-align: center;
+}
+
+.creacionTareas {
+    margin-top: 40px;
+}
+
+.creacionTareas label {
+    margin-right: 10px;
+}
+
+#campoNuevaTarea{
+    margin-right: 15px;
+}
+
+input[type="text"] {
+    width: 300px; /* Ancho del input */
+    padding: 10px; /* Espaciado interno del input */
+    margin: 5px 0; /* Margen exterior del input */
+    border: 2px solid #ddd; /* Borde del input */
+    border-radius: 4px; /* Bordes redondeados */
+    font-size: 16px; /* Tamaño del texto */
+    background-color: #f8f8f8; /* Color de fondo */
+}
+
+input[type="text"]:focus {
+    border-color: #888; /* Cambia el color del borde cuando el input está enfocado */
+    background-color: #eaeaea; /* Cambia el color de fondo cuando el input está enfocado */
+}
+
+input[type="submit"] {
+    padding: 10px 15px;
+    background-color: #7e3a84;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+input[type="submit"]:hover {
+    background-color: #66236c; /* Cambia el color al pasar el ratón por encima */
 }
