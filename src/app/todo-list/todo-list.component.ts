@@ -35,6 +35,7 @@ export class TodoListComponent {
     this.taskToAdd = new Task(undefined, this.titleNewTask, false);
     this.taskService.postTask(this.taskToAdd).subscribe({
       next: dato => {
+        this.retrieveTasks();
         console.log(dato);  
       },
       error: msg => {
