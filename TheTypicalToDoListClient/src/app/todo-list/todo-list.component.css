@@ -1,10 +1,12 @@
 .todoListaPardo {
-    border: 8px dashed #258a60;
+    border: 8px dashed #7e3a84;
     margin-top: 50px;
     margin-right: 30%;
     margin-left: 30%;
 }
 
 .tituloGeneral{
+    color: #2d1414;
+    font-family: 'Poppins', sans-serif;
     text-align: center;
 }
