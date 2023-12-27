@@ -44,4 +44,17 @@ export class TodoListComponent {
       }
     });
   }
+
+  deleteTask(taskId : number | undefined){
+    this.taskService.deleteTask(taskId).subscribe({
+      next: dato => {
+        this.retrieveTasks();
+        console.log(dato);  
+      },
+      error: msg => {
+        console.error("Hubo un error:");
+        console.error(msg);
+      }
+    });
+  }
 }

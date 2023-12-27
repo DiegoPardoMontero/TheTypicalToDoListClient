@@ -14,7 +14,7 @@
     <h2>Lista de Tareas:</h2>
     <div class="tareasActuales" *ngFor="let task of tasks">
         <p>{{task.title}}</p>
-        <input type="submit" class="botonBorrar" value="-">
+        <input type="submit" class="botonBorrar" value="-" (click)="deleteTask(task.id)">
         <button type="submit" class="botonEditar"><i class="fas fa-pencil-alt"></i></button>
     </div>
 </div>

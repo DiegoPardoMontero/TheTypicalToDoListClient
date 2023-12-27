@@ -24,4 +24,8 @@ export class TaskService {
   postTask(task : Task | undefined) : Observable<Task> {
     return this.http.post<Task>("http://localhost:8080/tasks/create", task, this.httpOptions);
   }
+
+  deleteTask(id : number | undefined) : Observable<Task>{
+    return this.http.delete<Task>("http://localhost:8080/tasks/delete/" + id, this.httpOptions);
+  }
 }
