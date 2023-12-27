@@ -4,6 +4,13 @@
             Pardo's To-Do List 
         </h1>     
     </div>
+    
+    <h2>Lista de Tareas:</h2>
+    <div class="tareasActuales" *ngFor="let task of tasks">
+        <p>{{task.title}}</p>
+        <input type="submit" class="botonBorrar" value="-" (click)="deleteTask(task.id)">
+        <button type="submit" class="botonEditar"><i class="fas fa-pencil-alt"></i></button>
+    </div>
     <div class="contenedorAgregarTareas">
         <form class="creacionTareas" (ngSubmit)="addTask()">
             <label for="campoNuevaTarea">Nueva Tarea:</label>
@@ -11,13 +18,19 @@
             <input type="submit" value="+">
         </form>  
     </div>
-    <h2>Lista de Tareas:</h2>
-    <div class="tareasActuales" *ngFor="let task of tasks">
-        <p>{{task.title}}</p>
-        <input type="submit" class="botonBorrar" value="-" (click)="deleteTask(task.id)">
-        <button type="submit" class="botonEditar"><i class="fas fa-pencil-alt"></i></button>
-    </div>
 </div>
+<footer>
+    <p>Desarrollado por 
+        <a href="https://github.com/DiegoPardoMontero">Diego Pardo Montero</a>
+    </p>
+    <p>Dic. 2023</p>
+    <div class="social-bar">
+        <a href="https://github.com/tuUsuario" target="_blank" class="social-icon"><i class="fab fa-github"></i></a>
+        <a href="https://linkedin.com/in/tuUsuario" target="_blank" class="social-icon"><i class="fab fa-linkedin-in"></i></a>
+        <a href="mailto:tuemail@gmail.com" class="social-icon"><i class="fas fa-envelope"></i></a>
+        <a href="https://instagram.com/tuUsuario" target="_blank" class="social-icon"><i class="fab fa-instagram"></i></a>
+    </div>
+</footer>
 
 
 

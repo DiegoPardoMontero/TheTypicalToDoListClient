@@ -85,3 +85,29 @@ input[type="submit"]:hover {
     margin-left: 20px;
     font-family: 'Poppins', sans-serif;
 }
+
+footer {
+    margin-top: 10%;
+    text-align: center;
+}
+
+.social-bar {
+    text-align: center;
+    padding: 10px 0; /* Ajusta el padding según necesites */
+}
+
+.social-icon {
+    margin: 0 10px; /* Espacio horizontal entre iconos */
+    color: #333; /* Color de los iconos */
+    text-decoration: none;
+    display: inline-block;
+}
+
+.social-icon i {
+    font-size: 24px; /* Tamaño de los iconos */
+    transition: color 0.3s;
+}
+
+.social-icon:hover {
+    color: #4e0c55; /* Color al pasar el mouse por encima */
+}
