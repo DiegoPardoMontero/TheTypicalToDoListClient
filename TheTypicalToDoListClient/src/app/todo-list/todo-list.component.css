@@ -52,3 +52,36 @@ input[type="submit"] {
 input[type="submit"]:hover {
     background-color: #66236c; /* Cambia el color al pasar el ratón por encima */
 }
+
+.contenedor h2 {
+    margin-top: 50px;
+}
+
+.tareasActuales {
+    display: flex;
+    align-items: center;
+}
+
+.botonEditar {
+    background-color: #7e3a84;
+    color: white;
+    border: none;
+    cursor: pointer;
+    padding-top: 12px;
+    padding-bottom: 12px;
+    padding-left: 10px;
+    padding-right: 8px;
+    margin-left: 10px;
+    border-radius: 3px;
+}
+
+.botonEditar i {
+    /* Espacio entre el ícono y el texto */
+    margin-right: 5px;
+}
+
+
+.botonBorrar {
+    margin-left: 20px;
+    font-family: 'Poppins', sans-serif;
+}

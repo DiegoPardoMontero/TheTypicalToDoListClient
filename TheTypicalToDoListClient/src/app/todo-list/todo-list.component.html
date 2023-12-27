@@ -11,7 +11,12 @@
             <input type="submit" value="+">
         </form>  
     </div>
-    
+    <h2>Lista de Tareas:</h2>
+    <div class="tareasActuales" *ngFor="let task of tasks">
+        <p>{{task.title}}</p>
+        <input type="submit" class="botonBorrar" value="-">
+        <button type="submit" class="botonEditar"><i class="fas fa-pencil-alt"></i></button>
+    </div>
 </div>
 
 
