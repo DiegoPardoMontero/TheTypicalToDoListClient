@@ -62,27 +62,9 @@ input[type="submit"]:hover {
     align-items: center;
 }
 
-.botonEditar {
-    background-color: #7e3a84;
-    color: white;
-    border: none;
-    cursor: pointer;
-    padding-top: 12px;
-    padding-bottom: 12px;
-    padding-left: 10px;
-    padding-right: 8px;
-    margin-left: 10px;
-    border-radius: 3px;
-}
-
-.botonEditar i {
-    /* Espacio entre el ícono y el texto */
-    margin-right: 5px;
-}
-
 
 .botonBorrar {
-    margin-left: 20px;
+    margin-right: 10px;
     font-family: 'Poppins', sans-serif;
 }
 
@@ -103,6 +85,16 @@ footer {
     display: inline-block;
 }
 
+.tareasActuales {
+    margin-top: 15px;
+} 
+
+.tachado {
+    color: #333;
+    text-decoration: line-through; /* Aplica el efecto de tachado */
+}
+
+
 .social-icon i {
     font-size: 24px; /* Tamaño de los iconos */
     transition: color 0.3s;
@@ -110,4 +102,36 @@ footer {
 
 .social-icon:hover {
     color: #4e0c55; /* Color al pasar el mouse por encima */
+}
+
+.checkbox-container {
+    display: inline-block;
+    margin-left: 10px;
+}
+
+.checkbox-label {
+    display: inline-block;
+    width: 25px; /* Tamaño del checkbox */
+    height: 25px; /* Tamaño del checkbox */
+    background-color: #f2f2f2; /* Color de fondo del checkbox */
+    border-radius: 5px; /* Bordes redondeados */
+    transition: all 0.3s; /* Transición suave para cambios de estilo */
+    cursor: pointer;
+    position: relative;
+}
+
+input[type="checkbox"]:checked + .checkbox-label {
+    background-color: #7e3a84; /* Color de fondo cuando está marcado */
+}
+
+input[type="checkbox"]:checked + .checkbox-label:after {
+    content: '';
+    position: absolute;
+    left: 9px;
+    top: 5px;
+    width: 5px;
+    height: 10px;
+    border: solid white;
+    border-width: 0 2px 2px 0;
+    transform: rotate(45deg);
 }

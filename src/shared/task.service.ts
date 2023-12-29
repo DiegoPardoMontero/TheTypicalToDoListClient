@@ -28,4 +28,8 @@ export class TaskService {
   deleteTask(id : number | undefined) : Observable<Task>{
     return this.http.delete<Task>("http://localhost:8080/tasks/delete/" + id, this.httpOptions);
   }
+
+  modifyTask(task : Task | undefined) : Observable<Task> {
+    return this.http.put<Task>("http://localhost:8080/tasks/modify", task, this.httpOptions);
+  }
 }

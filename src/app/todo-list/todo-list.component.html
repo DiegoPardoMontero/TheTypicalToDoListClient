@@ -4,19 +4,21 @@
             Pardo's To-Do List 
         </h1>     
     </div>
-    
-    <h2>Lista de Tareas:</h2>
-    <div class="tareasActuales" *ngFor="let task of tasks">
-        <p>{{task.title}}</p>
-        <input type="submit" class="botonBorrar" value="-" (click)="deleteTask(task.id)">
-        <button type="submit" class="botonEditar"><i class="fas fa-pencil-alt"></i></button>
-    </div>
     <div class="contenedorAgregarTareas">
         <form class="creacionTareas" (ngSubmit)="addTask()">
             <label for="campoNuevaTarea">Nueva Tarea:</label>
             <input type="text" id="campoNuevaTarea" name="campoNuevaTarea" [(ngModel)]="titleNewTask" required>
             <input type="submit" value="+">
         </form>  
+    </div>
+    <h2>Lista de Tareas:</h2>
+    <div class="tareasActuales" *ngFor="let task of tasks let i = index">
+        <input type="submit" class="botonBorrar" value="-" (click)="deleteTask(task.id)">
+        <span [ngClass]="{'tachado': task.completed}">{{ task.title }}</span>
+        <div class="checkbox-container">
+            <input type="checkbox" [id]="'checkbox' + i" hidden [(ngModel)]="task.completed" (click)="modifyTask(task)"/>
+            <label [for]="'checkbox' + i" class="checkbox-label"></label>
+        </div>        
     </div>
 </div>
 <footer>
