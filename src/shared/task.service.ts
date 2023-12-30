@@ -18,18 +18,18 @@ export class TaskService {
   };
 
   retrieveTasks() : Observable<Task[]>{
-    return this.http.get<Task[]>(`http://localhost:8080/tasks/list`);
+    return this.http.get<Task[]>(`https://localhost:8443/tasks/list`);
   }
 
   postTask(task : Task | undefined) : Observable<Task> {
-    return this.http.post<Task>("http://localhost:8080/tasks/create", task, this.httpOptions);
+    return this.http.post<Task>("https://localhost:8443/tasks/create", task, this.httpOptions);
   }
 
   deleteTask(id : number | undefined) : Observable<Task>{
-    return this.http.delete<Task>("http://localhost:8080/tasks/delete/" + id, this.httpOptions);
+    return this.http.delete<Task>("https://localhost:8443/tasks/delete/" + id, this.httpOptions);
   }
 
   modifyTask(task : Task | undefined) : Observable<Task> {
-    return this.http.put<Task>("http://localhost:8080/tasks/modify", task, this.httpOptions);
+    return this.http.put<Task>("https://localhost:8443/tasks/modify", task, this.httpOptions);
   }
 }
