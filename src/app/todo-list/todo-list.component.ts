@@ -62,7 +62,7 @@ export class TodoListComponent {
 
   modifyTask(tasktoModify : Task | undefined){
     console.log("Modifying task!");
-    var taskChange : boolean | undefined;
+    var taskChange : boolean | undefined  ;
     if(tasktoModify?.completed){
       taskChange = false;
     }
